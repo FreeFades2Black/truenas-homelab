@@ -22,7 +22,7 @@ Unlike my **network-diagram** repository, this project focuses on the server its
 
 # 🖥️ TrueNAS Dashboard
 
-![Enterprise Homelab](images/TrueNAS_Dashboard.png)
+![TrueNAS Dashboard](images/TrueNAS_Dashboard.png)
 
 ---
 
