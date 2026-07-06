@@ -1,112 +1,231 @@
-# TrueNAS Homelab
+# 🗄️ TrueNAS Homelab
 
-A personal homelab built to learn storage, virtualization, networking, and remote administration using **TrueNAS Scale**.
+![TrueNAS](https://img.shields.io/badge/TrueNAS-SCALE-0095D5?style=for-the-badge&logo=truenas)
+![Status](https://img.shields.io/badge/Status-Active-success?style=for-the-badge)
+![Homelab](https://img.shields.io/badge/Homelab-Portfolio-blue?style=for-the-badge)
+![Virtualization](https://img.shields.io/badge/Virtualization-KVM-orange?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-lightgrey?style=for-the-badge)
 
-## Overview
+> Enterprise-style TrueNAS Scale homelab built to develop practical skills in storage administration, virtualization, networking, Linux, Windows, and infrastructure management.
 
-This repository documents my TrueNAS homelab setup and the projects running on it. I use it as a learning environment to practice:
+---
 
-* Storage management
-* Virtualization
-* Network configuration
-* User and permission management
-* Remote access
-* System troubleshooting and documentation
+# 📖 Overview
 
-## Hardware
+This repository documents the build, configuration, and administration of my **TrueNAS Scale** server.
 
-* **Host:** Acer Nitro AN515-55 laptop
-* **CPU:** Intel Core i5-10300H
-* **Memory:** 47 GiB RAM available to TrueNAS
-* **Boot Drive:** 512 GB NVMe SSD
-* **Storage Pool:** `tank`
-* **Available Storage:** 4.22 TiB
+The server serves as the foundation of my enterprise-style homelab and provides centralized storage, virtualization, snapshots, backups, and network services used for learning and portfolio development.
 
-## Network Layout
+Unlike my **network-diagram** repository, this project focuses on the server itself—how it is configured, maintained, and expanded.
 
-* **LAN:** `192.168.1.0/24`
-* **Router:** `192.168.1.1`
-* **TrueNAS Server:** `192.168.1.20`
-* **Pi-hole:** `192.168.1.10`
-* **VM Network:** Static IPs on the local LAN
+---
 
-## What’s Running on TrueNAS
+# 🖥️ Architecture Summary
 
-### Virtual Machines
+![Enterprise Homelab](images/Network_Diagram.png)
 
-| VM            |     IP Address | Purpose                                  |
-| ------------- | -------------: | ---------------------------------------- |
-| Ubuntu Server | `192.168.1.30` | General Linux server, apps, and lab work |
-| Windows 11    | `192.168.1.32` | Windows management and testing           |
-| Kali Linux    | `192.168.1.33` | Security tools and network testing       |
+---
 
-> Note: My **macOS VM is not hosted on TrueNAS**. It runs on **VMware Workstation Pro** on my personal laptop.
+# 🏗️ Infrastructure
 
-### Network Services
+The TrueNAS server provides:
 
-* **Pi-hole** for DNS filtering and ad blocking
-* Remote access for management and administration
-* File storage and dataset organization
-* Snapshot-based recovery planning
+- Centralized storage
+- KVM Virtualization
+- Snapshot management
+- Data protection
+- Virtual Machine hosting
+- Secure network services
 
-## Goals of the Lab
+---
 
-* Learn how to manage storage and datasets in TrueNAS
-* Practice virtualization and VM provisioning
-* Build a secure and reliable home network
-* Document troubleshooting steps and lessons learned
-* Create portfolio material for GitHub and job applications
+# 💾 Storage
 
-## Features
+Current storage responsibilities include:
 
-* Centralized storage on a ZFS pool
-* VM hosting for Linux, Windows, and security testing
-* Local DNS filtering with Pi-hole
-* Basic network segmentation and access control
-* Manual documentation for recovery and future expansion
+- Storage Pool Management
+- Dataset Organization
+- Snapshot Scheduling
+- Backup Planning
+- Capacity Monitoring
 
-## Screenshots
+Future additions include:
 
-Add screenshots here as the project grows.
+- Replication
+- Automated Backup Verification
+- Cloud Backup Integration
 
-```text
-/images/truenas-dashboard.png
-/images/storage-pool.png
-/images/vm-list.png
-/images/network-diagram.png
-```
+---
 
-## Project Structure
+# 🖥️ Virtual Machines
+
+The server currently hosts the following virtual machines.
+
+| Virtual Machine | Purpose |
+|-----------------|---------|
+| Windows 11 | Windows administration & testing |
+| Ubuntu Server | Linux administration & development |
+| Kali Linux | Security testing & networking |
+
+---
+
+# 🌐 Network Services
+
+Infrastructure services currently include:
+
+- Pi-hole DNS
+- DNS Filtering
+- Advertisement Blocking
+- DNS Query Logging
+- Secure Remote Access (Tailscale)
+
+---
+
+# 🔐 Security
+
+Security practices implemented throughout the lab include:
+
+- Router firewall
+- VPN-only remote administration
+- Regular snapshots
+- Backup strategy
+- Strong authentication
+- Service isolation
+- Routine system updates
+
+---
+
+# 📂 Repository Structure
 
 ```text
 truenas-homelab/
+│
 ├── README.md
-├── images/
-├── diagrams/
 ├── docs/
-├── vms/
-└── scripts/
+│   ├── installation.md
+│   ├── storage.md
+│   ├── networking.md
+│   ├── virtualization.md
+│   ├── backups.md
+│   └── troubleshooting.md
+│
+├── images/
+│   ├── Network_Diagram.png
+│   ├── dashboard.png
+│   ├── storage-pools.png
+│   ├── datasets.png
+│   ├── virtual-machines.png
+│   └── snapshots.png
+│
+├── scripts/
+│   └── backup-check.sh
+│
+└── screenshots/
 ```
 
-## Lessons Learned
+---
 
-* Planning storage early makes the setup easier to manage later.
-* Clear documentation helps when rebuilding or troubleshooting.
-* Static IP assignments make lab services easier to track.
-* Virtual machines are useful for testing without affecting the main system.
+# 📚 Documentation
 
-## Future Improvements
+This repository includes documentation for:
 
-* Add more detailed network diagrams
-* Expand backup and snapshot documentation
-* Document VM provisioning steps
-* Add scripts for maintenance tasks
-* Improve security and access controls
+- Initial Installation
+- Storage Configuration
+- Dataset Organization
+- Virtual Machine Deployment
+- Network Configuration
+- Backup Strategy
+- Snapshot Management
+- Troubleshooting
+- Future Improvements
 
-## Why I Built This
+---
 
-This lab gives me a real environment to practice skills that matter in IT and cybersecurity, including storage management, virtualization, networking, and troubleshooting. It also serves as a portfolio project that shows how I organize and support a working homelab.
+# 🛠️ Technologies
 
-## License
+### Infrastructure
 
-This project is for personal learning and portfolio use.
+- TrueNAS Scale
+- KVM Virtualization
+- ZFS
+- Pi-hole
+- Tailscale VPN
+
+### Operating Systems
+
+- Windows 11
+- Ubuntu Server
+- Kali Linux
+
+### Management
+
+- Git
+- GitHub
+- SSH
+- Web Administration
+
+---
+
+# 🎯 Skills Demonstrated
+
+This project showcases practical experience with:
+
+- Storage Administration
+- ZFS Storage Management
+- Virtualization
+- Linux Administration
+- Windows Administration
+- DNS Administration
+- Infrastructure Documentation
+- Backup & Recovery
+- Network Troubleshooting
+- System Monitoring
+- Security Hardening
+
+---
+
+# 🚀 Roadmap
+
+Planned improvements include:
+
+- [ ] Docker Applications
+- [ ] Active Directory Lab
+- [ ] Monitoring with Grafana
+- [ ] Prometheus Integration
+- [ ] VLAN Segmentation
+- [ ] Reverse Proxy
+- [ ] Automated Backups
+- [ ] Infrastructure as Code
+
+---
+
+# 📸 Screenshots
+
+| Dashboard | Storage |
+|-----------|---------|
+| ![](images/dashboard.png) | ![](images/storage-pools.png) |
+
+| Virtual Machines | Snapshots |
+|------------------|-----------|
+| ![](images/virtual-machines.png) | ![](images/snapshots.png) |
+
+---
+
+# 🔗 Related Projects
+
+- **Enterprise Homelab Network Diagram** – High-level network architecture and documentation
+- **Linux Administration Lab**
+- **PowerShell Automation**
+- **Networking Lab**
+
+---
+
+# 📝 Notes
+
+This repository is intended for educational and portfolio purposes. Administrative endpoints, sensitive configuration details, and internal infrastructure information have been intentionally omitted while preserving the overall design and technical implementation.
+
+---
+
+## 📄 License
+
+This project is released under the MIT License and is intended for learning, documentation, and portfolio purposes.
