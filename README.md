@@ -207,7 +207,8 @@ Planned improvements include:
 
 | Virtual Machines | Snapshots |
 |------------------|-----------|
-| ![](images/virtual-machines.png) | ![](images/snapshots.png) |
+| ![](images/virtual-machines1.png) | ![](images/snapshots.png) |
+| ![](images/virtual-machines.png) |
 
 ---
 
