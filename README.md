@@ -203,8 +203,7 @@ Planned improvements include:
 
 | Dashboard | Storage |
 |-----------|---------|
-| ![](images/dashboard.png) | ![](images/storage-pools1.png) |
-                            | ![](images/storage-pools.png) |
+| ![](images/dashboard.png) | ![](images/storage-pools1.png)| ![](images/storage-pools.png) | |
 
 | Virtual Machines | Snapshots |
 |------------------|-----------|
