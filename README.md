@@ -101,14 +101,6 @@ Security practices implemented throughout the lab include:
 truenas-homelab/
 │
 ├── README.md
-├── docs/
-│   ├── installation.md
-│   ├── storage.md
-│   ├── networking.md
-│   ├── virtualization.md
-│   ├── backups.md
-│   └── troubleshooting.md
-│
 ├── images/
 │   ├── Network_Diagram.png
 │   ├── dashboard.png
