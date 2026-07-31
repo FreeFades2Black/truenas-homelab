@@ -1,13 +1,26 @@
 # TrueNAS Homelab
 
-This repository contains configuration and automation resources for a homelab environment based on TrueNAS.
+This repository is a lightweight starter for a TrueNAS homelab environment.
 
-## Quick start
+## Project purpose
 
-1. Review the repository files.
-2. Follow the setup steps in the documentation.
-3. Customize the configuration for your environment.
+This repo is intended to help organize homelab resources, setup notes, and helper scripts.
+
+## Windows quick start
+
+1. Open PowerShell in the repository root.
+2. Run the repository validator:
+
+```powershell
+.\scripts\check_repo.ps1
+```
+
+3. Check whether required tools are installed:
+
+```powershell
+.\scripts\check_tools.ps1
+```
 
 ## Notes
 
-This project is intended as a starting point for homelab automation and infrastructure management.
+This repository is intentionally small and easy to extend.
